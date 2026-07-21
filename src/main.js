@@ -1,5 +1,15 @@
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
+let searchbar = `
+    <div id="searchbar">
+        <form action="https://www.google.com/search" method="get">
+          <input type="text" name="q" placeholder="Search" class="input">
+          <button type="submit"></button>
+        </form>
+    </div>`;
+
+
+
 document.querySelector("#app").innerHTML = "<p>loading...</p>";
 
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`).
@@ -17,8 +27,8 @@ then(response => response.json()).then(data => {
 document.querySelector("#app").innerHTML = `
     <h1 id="title">${data.title}</h1>
     ${media}
+    ${searchbar}
     <p id="explanation">${data.explanation}</p>
-    <button><img></button>
     `;
 })
 .catch(err => {
