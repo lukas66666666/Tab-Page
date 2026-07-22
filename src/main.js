@@ -1,10 +1,10 @@
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
-let searchbar = `
+const searchbar = `
     <div id="searchbar">
-        <form action="https://www.google.com/search" method="get">
+        <form action="https://www.google.com/search" method="get" id="search_form">
           <input type="text" name="q" placeholder="Search" class="input">
-          <button type="submit"></button>
+          <button type="submit" id="search_btn"><img src="src/icons/searchIcon.png" alt="search icon"></button>
         </form>
     </div>`;
 
