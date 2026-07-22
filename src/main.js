@@ -7,7 +7,6 @@ const searchbar = `
           <button type="submit" id="search_btn"><img src="src/icons/searchIcon.png" alt="search icon"></button>
         </form>
     </div>`;
-const test = document.getElementById("test")
 
 document.querySelector("#app").innerHTML = "<p>loading...</p>";
 
@@ -23,20 +22,16 @@ then(response => response.json()).then(data => {
     media = `<iframe src="${data.url}" class="media"></iframe>`;
 }
 
-const imageInfo = `
+const infoContainer = `
 <div id="infoContainer">
     <h1>${data.title}</h1>
     <p>${data.explanation}</p>
 </div>`;
 
-const infoBtn = `<button id="infoBtn" type="button">
-<img src="src/icons/info.png"  alt="Info about today’s image."></button>`;
-
 document.querySelector("#app").innerHTML = `
     ${media}
     ${searchbar}
-    ${infoBtn}
-    ${imageInfo}
+    ${infoContainer}
     `;
 })
 .catch(err => {
