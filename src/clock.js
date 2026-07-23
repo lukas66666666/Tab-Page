@@ -1,5 +1,3 @@
-const clockContainer = document.getElementById("clockContainer");
-
 function updateTime() {
     const date = new Date();
     let hours = date.getHours();
@@ -11,7 +9,7 @@ function updateTime() {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let clock = `<p id="clock">${hours}:${minutes}</p>
     <p id="date">${days[dayOfWeek]} ${day}.${month + 1}.</p>`;
-    clockContainer.innerHTML = clock;
+    document.getElementById("clockContainer").innerHTML = clock;
     setTimeout(updateTime, 1000);
 }
 

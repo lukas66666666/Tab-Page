@@ -4,7 +4,8 @@ const searchbar = `
     <div id="searchbar">
         <form action="https://www.google.com/search" method="get" id="search_form">
           <input type="text" name="q" placeholder="Search" class="input">
-          <button type="submit" id="search_btn"><img src="src/icons/searchIcon.png" alt="search icon"></button>
+          <button type="submit" id="search_btn"><img src="src/icons/searchIcon.png">
+            </button>
         </form>
     </div>`;
 
