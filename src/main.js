@@ -1,5 +1,6 @@
 import "./button.js";
 import "./clock.js";
+import searchIcon from "./icons/searchIcon.png";
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
@@ -7,7 +8,7 @@ const searchbar = `
     <div id="searchbar">
         <form action="https://www.google.com/search" method="get" id="search_form">
           <input type="text" name="q" placeholder="Search" class="input">
-          <button type="submit" id="search_btn"><img src="src/icons/searchIcon.png">
+          <button type="submit" id="search_btn"><img src="${searchIcon}" alt="Search"></button>
             </button>
         </form>
     </div>`;
