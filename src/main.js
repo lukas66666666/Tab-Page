@@ -1,3 +1,6 @@
+import "./button.js";
+import "./clock.js";
+
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
 const searchbar = `
