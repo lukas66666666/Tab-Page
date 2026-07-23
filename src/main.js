@@ -1,6 +1,6 @@
 import "./button.js";
 import "./clock.js";
-import searchIcon from "./icons/searchIcon.png";
+const searchIcon = new URL("./icons/searchIcon.png", import.meta.url).href;
 
 const API_KEY = import.meta.env.VITE_NASA_API_KEY;
 
