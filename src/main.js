@@ -9,7 +9,6 @@ const searchbar = `
         <form action="https://www.google.com/search" method="get" id="search_form">
           <input type="text" name="q" placeholder="Search" class="input">
           <button type="submit" id="search_btn"><img src="${searchIcon}" alt="Search"></button>
-            </button>
         </form>
     </div>`;
 
